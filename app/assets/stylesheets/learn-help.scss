@@ -170,6 +170,12 @@ aside {
 
 /* forms */
 
+form {
+  border: 3px solid $gray-medium;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
@@ -194,4 +200,18 @@ input {
   .form-control {
     background-color: $secondary;
   }
+}
+
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
 }
