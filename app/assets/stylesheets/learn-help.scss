@@ -93,12 +93,16 @@ footer {
   small {
     float: left;
   }
+  nav.mini-nav {
+    width: 100%;
   ul {
-    float: right;
+    margin-right: 15px;
     list-style: none;
+    
     li {
-      float: left;
-      margin-left: 15px;
+      float: right;
+      margin-right: 15px;
     }
   }
+}
 }
