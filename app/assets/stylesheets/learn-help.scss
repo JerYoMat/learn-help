@@ -1,4 +1,6 @@
 /* universal */
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 $primary:#000505;
 $secondary:rgba(1,50,64, 0.9);
@@ -56,11 +58,14 @@ p {
 }
 
 
-/* header */
+/* navbar */
 nav.navbar{
   background-color: $secondary;
   color: $tertiary;
+ 
+
 }
+
 
 
 #logo {
