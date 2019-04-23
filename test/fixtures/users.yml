@@ -1,0 +1,6 @@
+test_user_one:
+  id: 1
+  name: Testy Sam Bam
+  email: testy@sambam.com
+  password_digest: <%= BCrypt::Password.create('password1') %>
+  
