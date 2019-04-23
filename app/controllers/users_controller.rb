@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
-  before_action :set_user, except: [:new, :create, :update, :index] 
+  before_action :set_user, only: [:show, :edit]
 
   def show
-   
+    
   end 
 
   def new
@@ -26,6 +26,7 @@ class UsersController < ApplicationController
 
 
   def edit
+    
   end
 
   def update
