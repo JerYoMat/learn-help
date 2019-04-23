@@ -22,4 +22,6 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: learn_help_production
+  username: learn_help
+  password: <%= ENV['LEARN_HELP_DATABASE_PASSWORD'] %>
