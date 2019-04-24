@@ -20,7 +20,7 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-github'
 gem 'dotenv-rails'
-
+gem 'popper_js', '~> 1.14.5'
 
 group :development, :test do
   gem 'pry'
