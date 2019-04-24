@@ -44,7 +44,7 @@ class SessionsController < ApplicationController
       pwd = SecureRandom.hex #To bypass validations for password set up in user model
       user.password = pwd 
       user.password_confirmation = pwd
-      user.remmember_digest = '0'
+      user.remember_digest = '0'
     end
 
     log_in(@user)
