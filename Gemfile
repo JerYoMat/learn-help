@@ -19,6 +19,7 @@ gem 'font-awesome-sass', '~> 5.8.1'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-github'
+gem 'omniauth-google-oauth2'
 gem 'dotenv-rails'
 
 
