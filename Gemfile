@@ -21,6 +21,7 @@ gem 'omniauth-facebook'
 gem 'omniauth-github'
 gem 'dotenv-rails'
 
+
 group :development, :test do
   gem 'pry'
   gem 'sqlite3'
