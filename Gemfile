@@ -20,11 +20,10 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-github'
 gem 'dotenv-rails'
-
+gem 'pry'
 group :development, :test do
   
   gem 'sqlite3'
-  gem 'pry'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
