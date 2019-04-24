@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2019_04_23_202352) do
     t.string "name"
     t.string "email"
     t.string "password_digest"
-    t.string "provider_id", default: "000001"
+    t.string "provider_id"
     t.string "provider", default: "learnHELP"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -26,7 +26,7 @@ class SessionsController < ApplicationController
       pwd = SecureRandom.hex 
       u.password = pwd 
       u.password_confirmation = pwd
-      user.remmember_digest = '0'
+      u.remember_digest = '0'
     end
     log_in(@user)
     redirect_to @user
