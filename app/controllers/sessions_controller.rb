@@ -1,4 +1,4 @@
-require 'pry'
+
 class SessionsController < ApplicationController
   def new
   end
