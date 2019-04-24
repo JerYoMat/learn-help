@@ -7,4 +7,9 @@ test_user_two:
   name: Pesky Tester
   email: tester@pest.com
   password_digest: <%= BCrypt::Password.create('password1') %>
-  
+
+admin_user:
+  name: Addy
+  email: addy@admin.com
+  password_digest:  <%= BCrypt::Password.create('password1') %>
+  admin: true 
