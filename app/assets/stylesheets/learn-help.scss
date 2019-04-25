@@ -59,23 +59,37 @@ p {
 
 
 /* navbar */
-nav.navbar{
+.topnav {
+  overflow: hidden;
   background-color: $secondary;
-  color: $tertiary;
-  margin-bottom: 60px;
-  
-
+  margin-bottom: 2rem;
+  height: 3rem;
 }
+
+.topnav a {
+  float: left;
+  color: $tertiary;
+  text-align: center;
+  padding: 1rem;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.topnav a:hover {
+  color: $action;
+}
+
+
 
 
 
 #logo {
   float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
+  margin-left: 0.5rem;
+  margin-right: 0.125rem;
+  font-size: 1.5rem;
   color: white;
   letter-spacing: -1px;
-  padding-top: 9px;
   font-weight: bold;
   &:hover {
     color: $action;
