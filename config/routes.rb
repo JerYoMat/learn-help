@@ -14,5 +14,5 @@ Rails.application.routes.draw do
   delete '/logout',  to: 'sessions#destroy'
   get '/auth/facebook/callback' => 'sessions#oauth_create'
   get '/auth/github/callback' => 'sessions#oauth_create'
-  get '/.well-known/acme-challenge/mxs0XXnLfewv-SIcW3rXli9uICWMPvYmer5ztvshQvs' => 'static_pages#acme_challenge1'
+  get '/.well-known/acme-challenge/2gqtURELxXuPONd1-cLbmsgckPDdnkmbg6K02lam0m8' => 'static_pages#acme_challenge1'
 end
