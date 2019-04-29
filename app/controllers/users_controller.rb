@@ -1,10 +1,12 @@
+require 'pry'
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update]
-  before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
+  before_action :store_location, only: [:edit]
+  before_action :logged_in_user, only: [:show, :index, :edit, :update, :destroy]
   before_action :correct_user,   only: [:edit, :update]
   before_action :admin_user,     only: [:destroy, :index]
 
   def show
+    @user = User.find(params[:id])
   end 
 
   def new
@@ -29,7 +31,6 @@ class UsersController < ApplicationController
 
 
   def edit
-    
   end
 
   def update
