@@ -1,4 +1,8 @@
 class User < ApplicationRecord
+  has_many :topics 
+  has_many :tips 
+  has_many :tip_ratings 
+  
   attr_accessor :remember_token
   
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
