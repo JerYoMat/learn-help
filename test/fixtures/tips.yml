@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+test_tip_one:
+  id: 1
+  title: Full App Rails tutorial
+  link: www.railstutorial.org
+  benefit: test benefit text
+  user_id: 1
+  topic_id: 1
+
+test_tip_two:
+  id: 2
+  title: Some other tip
+  link: www.sometutorial.org
+  benefit: test benefit text
+  user_id: 1
+  topic_id: 1
