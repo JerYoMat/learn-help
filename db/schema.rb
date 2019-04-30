@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2019_04_30_200905) do
     t.string "title"
     t.string "link"
     t.text "benefit"
+    t.string "tip_type"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -49,6 +50,9 @@ ActiveRecord::Schema.define(version: 2019_04_30_200905) do
     t.string "name"
     t.string "email"
     t.string "password_digest"
+    t.boolean "bootcamp_student"
+    t.boolean "has_graduated"
+    t.string "camp_organization"
     t.string "provider_id"
     t.string "provider", default: "learnHELP"
     t.datetime "created_at", null: false

@@ -5,6 +5,7 @@ class CreateTips < ActiveRecord::Migration[5.2]
       t.string :title
       t.string :link
       t.text :benefit
+      t.string :tip_type 
       t.references :user, foreign_key: true
       t.timestamps
     end
