@@ -6,5 +6,5 @@ class Tip < ApplicationRecord
   validates :topic_id, presence: true
   validates :link, presence: true
   validates :benefit, presence: true 
-
+  validates :tip_type, presence: true 
 end

@@ -7,7 +7,7 @@ class TipTest < ActiveSupport::TestCase
       title: "test title",
       link: "www.railstutorial.org",
       benefit: "build full rails application while slowly transitioning  to a tdd approach to adding new features.",
-      topic_id: 1 
+      topic_id: 1, tip_type: 'code-along'
     )
   end 
 
@@ -32,6 +32,11 @@ class TipTest < ActiveSupport::TestCase
 
   test 'has a owner' do 
     @tip.user_id = nil 
+    assert_not @tip.valid? 
+  end 
+
+  test 'has a type' do 
+    @tip.tip_type = nil 
     assert_not @tip.valid? 
   end 
 

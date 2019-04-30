@@ -5,6 +5,7 @@ test_tip_one:
   title: Full App Rails tutorial
   link: www.railstutorial.org
   benefit: test benefit text
+  tip_type: theory
   user_id: 1
   topic_id: 1
 
@@ -13,5 +14,6 @@ test_tip_two:
   title: Some other tip
   link: www.sometutorial.org
   benefit: test benefit text
+  tip_type: code along
   user_id: 1
   topic_id: 1
