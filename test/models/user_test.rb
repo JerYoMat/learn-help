@@ -5,13 +5,28 @@ class UserTest < ActiveSupport::TestCase
 
   setup do
     @user = User.new(name: 'Example User', email: 'user@example.com',
-    password: 'foobars', password_confirmation: 'foobars')
+    password: 'foobars', password_confirmation: 'foobars', bootcamp_student: true, has_graduated: true, camp_organization: 'flatiron')
   end
 
 
   test 'should be valid' do
     assert @user.valid?
   end
+
+  test 'bootcamp_student should be present' do 
+    @user.bootcamp_student = nil 
+    assert_not @user.valid?
+  end 
+
+  test 'has_graduated should be present' do 
+    @user.has_graduated = nil 
+    assert_not @user.valid? 
+  end 
+
+  test 'camp_organization should be present' do 
+    @user.camp_organization = nil 
+    assert_not @user.valid?
+  end 
 
   test 'name should be present' do
     @user.name = ''
@@ -61,6 +76,7 @@ class UserTest < ActiveSupport::TestCase
       assert_not @user.valid?, '#{invalid_address.inspect} should be invalid'
     end
   end
+
 
   test 'email address should be unique' do 
     duplicate_user = @user.dup
