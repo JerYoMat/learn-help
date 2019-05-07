@@ -1,0 +1,38 @@
+$primary:#000505;
+$secondary:rgba(1,50,64, 0.9);
+$tertiary: #e0e0e0;
+$action: #00b3e6;
+$neutral-medium: #9d9d9d;
+
+
+.canvas {
+  width: 100%;
+  height: 40vh;
+  max-height: 600px;
+  background-color: red; /*placeholder*/
+}
+
+.searchlight {
+  position: absolute;
+  z-index: 100;
+  height: 300px;
+  width: 300px;
+  border-width: 100vh 100vw;
+  border-style: solid;
+  border-color: $primary;
+  top: -100vh;
+  left: -100vw;
+  cursor: none;
+  background: $primary;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.searchlight.on {
+  background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 60%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,1) 60%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,1) 60%,rgba(0,0,0,1) 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,1) 60%,rgba(0,0,0,1) 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,1) 60%,rgba(0,0,0,1) 100%); /* W3C */
+}

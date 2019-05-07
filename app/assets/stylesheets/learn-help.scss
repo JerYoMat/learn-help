@@ -15,6 +15,7 @@ body {
   color: $tertiary;
 }
 
+
 section {
   overflow: auto;
 }
@@ -25,9 +26,10 @@ textarea {
 
 .center {
   text-align: center;
-  h1 {
-    margin-bottom: 10px;
-  }
+}
+
+.center h1 {
+  margin-bottom: 10px;
 }
 
 /* typography */
@@ -49,30 +51,77 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: $tertiary;
 }
 
 p {
   font-size: 1.1em;
   line-height: 1.7em;
 }
-
-
 /* navbar */
 div.navigation {
-  height: 55px;
+  position: relative;
+  z-index: 150;
+  height: 56px;
   background-color: $secondary;
+
   a#logo {
-    display: inline-block;
-  }
-  div.content-links{
+    text-decoration-line: none;
     position: relative;
     float: left;
+    span#slash {
+      margin-left: 1rem;
+      font-size: 36px;
+      top: 10px;
+      color: $action;
+      &:hover {
+        color: $tertiary;
+      }
+    }
+    span#learn, span#help {
+      font-size: 24px;
+      color: $tertiary;
+      &:hover {
+        text-decoration: none;
+        color: $action;
+      }
+    }
+  }
+
+  div.a {
+    position: relative;
+  }
+  div.content-links a.nav-left{
+    margin: 18px 0.5rem 18px 1rem;
+    float: left;
+    font-size: 20px;
+    color: $neutral-medium;
+    &:hover {
+      text-decoration: none;
+      color: $action;
+    }
   }
   div.user-links {
-    position: relative;
+  .nav-right, span{
+    margin: 18px 1rem 18px 0.5rem;
     float: right;
+    font-size: 20px;
+    color: $neutral-medium;
+    &:hover {
+      text-decoration: none;
+      color: $action;
+    }
   }
+  span{
+    margin: 12px 1rem 12px 0.5rem;
+    color: $neutral-medium;
+    font-size: 24px;
+    height: 32px;
+    &:hover {
+      text-decoration: none;
+      color: $neutral-medium;
+    }
+  }
+}
 }
 
 
@@ -114,16 +163,6 @@ footer {
   box-sizing:         border-box;
 }
 
-/* miscellaneous */
-
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  color: $tertiary;
-  margin-top: 45px;
-  @include box_sizing;
-}
 /* sidebar */
 
 aside {
