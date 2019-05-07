@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2019_04_30_200905) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["topic_id"], name: "index_tips_on_topic_id"
+    t.index ["user_id", "created_at"], name: "index_tips_on_user_id_and_created_at"
     t.index ["user_id"], name: "index_tips_on_user_id"
   end
 
@@ -50,9 +51,7 @@ ActiveRecord::Schema.define(version: 2019_04_30_200905) do
     t.string "name"
     t.string "email"
     t.string "password_digest"
-    t.boolean "bootcamp_student"
-    t.boolean "has_graduated"
-    t.string "camp_organization"
+    t.string "bootcamp_name"
     t.string "provider_id"
     t.string "provider", default: "learnHELP"
     t.datetime "created_at", null: false

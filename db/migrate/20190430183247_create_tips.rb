@@ -9,5 +9,6 @@ class CreateTips < ActiveRecord::Migration[5.2]
       t.references :user, foreign_key: true
       t.timestamps
     end
+    add_index :tips, [:user_id, :created_at]
   end
 end

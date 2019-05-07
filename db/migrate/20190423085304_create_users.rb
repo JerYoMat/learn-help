@@ -4,9 +4,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :email
       t.string :password_digest
-      t.boolean :bootcamp_student
-      t.boolean :has_graduated
-      t.string :camp_organization
+      t.string :bootcamp_name
       t.string :provider_id
       t.string :provider, default: "learnHELP"
       t.timestamps
