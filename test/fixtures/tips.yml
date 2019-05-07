@@ -17,3 +17,12 @@ test_tip_two:
   tip_type: code along
   user_id: 1
   topic_id: 1
+
+test_tip_user_two:
+  id: 3
+  title: Some other tip
+  link: www.sometutorial.org
+  benefit: test benefit text
+  tip_type: code along
+  user_id: 2
+  topic_id: 1

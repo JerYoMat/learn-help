@@ -3,9 +3,7 @@ test_user_one:
   name: Testy Sam Bam
   email: testy@sambam.com
   password_digest: <%= BCrypt::Password.create('password1') %>
-  bootcamp_student: true 
-  has_graduated: true 
-  camp_organization: flatiron
+  bootcamp_name: Flatiron Coding School
   admin: false
 
 test_user_two:
@@ -13,9 +11,7 @@ test_user_two:
   name: Pesky Tester
   email: tester@pest.com
   password_digest: <%= BCrypt::Password.create('password1') %>
-  bootcamp_student: true 
-  has_graduated: true 
-  camp_organization: flatiron
+  bootcamp_name: Flatiron Coding School
   admin: false
 
 admin_user:
@@ -23,7 +19,5 @@ admin_user:
   name: Addy
   email: addy@admin.com
   password_digest:  <%= BCrypt::Password.create('password1') %>
-  bootcamp_student: true 
-  has_graduated: true 
-  camp_organization: flatiron
+  bootcamp_name: Flatiron Coding School
   admin: true 
