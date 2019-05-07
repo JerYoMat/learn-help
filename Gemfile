@@ -22,6 +22,7 @@ gem 'omniauth-github'
 gem 'dotenv-rails'
 gem 'popper_js', '~> 1.14.5'
 gem 'bootstrap', '~> 4.3.1'
+gem 'will_paginate', '~> 3.1.0'
 
 group :development, :test do
   gem 'pry'
