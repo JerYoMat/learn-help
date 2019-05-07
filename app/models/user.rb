@@ -8,9 +8,7 @@ class User < ApplicationRecord
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   before_save { self.email = email.downcase }
   has_secure_password
-  validates :bootcamp_student, presence: true 
-  validates :has_graduated, presence: true 
-  validates :camp_organization, presence: true 
+  validates :bootcamp_name, presence: true 
   validates :name, presence: true, length: { maximum: 255} 
   validates :email, presence: true, length: { maximum: 255}, format:  { with: VALID_EMAIL_REGEX }, uniqueness:{ case_sensitive: false }
   validates :password, presence: true, confirmation: true, length: { minimum: 6 }, allow_nil: true 
@@ -40,6 +38,10 @@ class User < ApplicationRecord
 
   def forget 
     update_attribute(:remember_digest, nil)
+  end 
+
+  def feed 
+    Tip.where('user_id = ?', id)
   end 
 
 end
