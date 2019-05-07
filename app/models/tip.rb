@@ -7,4 +7,5 @@ class Tip < ApplicationRecord
   validates :link, presence: true
   validates :benefit, presence: true 
   validates :tip_type, presence: true 
+  default_scope -> { order(created_at: :desc) }
 end
