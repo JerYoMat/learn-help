@@ -17,13 +17,7 @@
       </div>
   </div>
 <% else %>
-  <div class='center banner'>
-    <h1>Welcome to learnHELP</h1>
-    <p>A place for the blind to collectively learn from the pain and eureka moments of others.</p>
-    
-    <span><%= link_to '', '/auth/facebook', class: 'fab fa-facebook' %></span>
-    <span><%= link_to '', '/auth/github', class: 'fab fa-github-square' %></span>
-  </div>
+  <%= render 'static_pages/not_logged_in' %>
 <% end %>
 
 
