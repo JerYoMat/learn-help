@@ -6,14 +6,15 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
-      <% if current_user.admin? && !current_user?(user) %>
-      | <%= link_to "delete", user, method: :delete,
-        data: {
-          confirm: "You sure?" 
-      } %>
-      <% end %>
-
     </section>
   </aside>
-  <div class='col-md-8'></div>
+  <div class='col-md-8'>
+    <% if @user.tips.any? %>
+      <h3>Tips (<%= @user.tips.count %>)</h3>
+      <ol class='tips'>
+        <%= render @tips %>
+      </ol>
+      <%= will_paginate @tips%>
+    <% end %>
+  </div>
 </div>

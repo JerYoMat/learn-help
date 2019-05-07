@@ -1,6 +1,6 @@
 <%= form_for(@user) do |f| %>
-  <%= render 'shared/error_messages', object: @user %>
-
+  <%= render 'shared/error_messages', object: f.object %>
+  
   <%= f.label :name %>
   <%= f.text_field :name, class: 'form-control' %>
 
@@ -12,6 +12,9 @@
 
   <%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+  <%= f.label :bootcamp_name %>
+  <%= f.text_field :bootcamp_name, class: 'form-control' %>
 
   <%= f.submit yield(:button_text), class: "btn btn-primary" %>
 <% end %>
