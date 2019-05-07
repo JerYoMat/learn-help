@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
-  resources :topics
-  resources :tips 
-  resources :tip_ratings 
+  resources :topics, only: [:index, :show]
+  resources :tips, only: [:create, :destroy] 
+  resources :tip_ratings, only: [:create]
   resources :users
   get '/acknowledgements', to: 'static_pages#credits'
   get '/code_of_conduct', to: 'static_pages#code_of_conduct'
