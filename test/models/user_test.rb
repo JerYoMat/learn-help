@@ -5,7 +5,7 @@ class UserTest < ActiveSupport::TestCase
 
   setup do
     @user = User.new(name: 'Example User', email: 'user@example.com',
-    password: 'foobars', password_confirmation: 'foobars', bootcamp_student: true, has_graduated: true, camp_organization: 'flatiron')
+    password: 'foobars', password_confirmation: 'foobars', bootcamp_name:'flatiron')
   end
 
 
@@ -13,18 +13,9 @@ class UserTest < ActiveSupport::TestCase
     assert @user.valid?
   end
 
-  test 'bootcamp_student should be present' do 
-    @user.bootcamp_student = nil 
-    assert_not @user.valid?
-  end 
 
-  test 'has_graduated should be present' do 
-    @user.has_graduated = nil 
-    assert_not @user.valid? 
-  end 
-
-  test 'camp_organization should be present' do 
-    @user.camp_organization = nil 
+  test 'bootcamp should be present' do 
+    @user.bootcamp_name = nil 
     assert_not @user.valid?
   end 
 
