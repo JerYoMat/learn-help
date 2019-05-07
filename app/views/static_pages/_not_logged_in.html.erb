@@ -1,0 +1,22 @@
+<div class="canvas">
+    <h1 class='center'>Welcome to learnHELP</h1>
+    <span><%= link_to '', '/auth/facebook', class: 'fab fa-facebook' %></span>
+    <span><%= link_to '', '/auth/github', class: 'fab fa-github-square' %></span>
+</div>
+<div class="searchlight"></div>
+
+<script>
+$('.searchlight')
+    .on('mousemove', function(event) {
+        $(this).addClass('on').css({'margin-left': event.pageX - 150, 'margin-top': event.pageY - 150});
+    })
+    .on('mouseout', function(event) {
+        $(this).removeClass('on');
+    })
+    .on('click', function() {
+        $(this).fadeOut(function() {
+            $(this).detach();
+        });
+    })
+;
+</script>
