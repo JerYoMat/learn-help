@@ -1,0 +1,11 @@
+<%= form_for(@tip) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= f.text_field :title, placeholder: 'Provide a descriptive title...'%>
+    <%= f.text_field :link, placeholder: 'Provide a link...'%>
+    <%= f.text_field :tip_type, placeholder: 'What kind of resource is this?'%>
+    <%= f.text_area :benefit, placeholder: "How the resource helped you learn..." %>
+  </div>
+  <%= f.submit "Post", class: "btn btn-primary" %>
+<% end %>
+

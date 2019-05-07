@@ -1,0 +1,13 @@
+<li id="tip-<%= tip.id %>">
+  <%= link_to gravatar_for(tip.user, size: 50), tip.user %>
+  <span class="user"><%= link_to tip.user.name, tip.user %></span>
+  <span class="title"><%= tip.title %></span>
+  <span class="link"><%= tip.link %></span>
+  <span class="tip_type"><%= tip.tip_type %>
+  <% if current_user?(tip.user) %>
+    <%= link_to "delete", tip, 
+      method: :delete,
+      data: { confirm: "Are you sure you wish to delete this tip?" } %>
+  <% end %>
+  </span>
+</li>

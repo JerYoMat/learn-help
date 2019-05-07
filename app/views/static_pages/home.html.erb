@@ -1,10 +1,28 @@
+<% if logged_in? %>
+  <div class='row'>
+    <aside class='col-md-4'>
+      <section class='user_info'>
+        <%= render 'shared/user_info' %>
+      </section>
+      <section class='tip_form'>
+        <%= render 'shared/tip_form' %>
+      </section>
+    </aside>
+      <div class='col-md-8'>
+        <h3>Tip Feed</h3>
+        <%= render 'shared/feed' %>
+      </div>
+  </div>
+<% else %>
+  <div class='center banner'>
+    <h1>Welcome to learnHELP</h1>
+    <p>A place for the blind to collectively learn from the pain and eureka moments of others.</p>
+    
+    <span><%= link_to '', '/auth/facebook', class: 'fab fa-facebook' %></span>
+    <span><%= link_to '', '/auth/github', class: 'fab fa-github-square' %></span>
+  </div>
+<% end %>
 
-<div class="center banner">
-  <h1>Welcome to learnHELP</h1>
-  <p>A place for the blind to collectively learn from the pain and eureka moments of others.</p>
-  <h2><%= link_to('Log in with Facebook!', '/auth/facebook') %></h2>
-    <h2><%= link_to('Log in with github!', '/auth/github') %></h2>
-    <a class="fab fa-facebook"></a>
-<a class="fab fa-github-square"></a>
-</div>
+
+
 
