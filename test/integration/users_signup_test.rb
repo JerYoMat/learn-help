@@ -1,7 +1,12 @@
 require 'test_helper'
 
 class UsersSignupTest < ActionDispatch::IntegrationTest
-  
+  setup do
+    @user = User.new(name: 'Example User', email: 'user@example.com',
+    password: 'foobars', password_confirmation: 'foobars', bootcamp_name:'flatiron')
+  end
+
+
   test "invalid signup information" do
     get signup_path
     assert_no_difference 'User.count' do
@@ -23,9 +28,10 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
       post users_path, params: { 
         user: { 
           name:  "Example User",
-          email: "user@example.com",
+          email: "usertesting@example.com",
           password:              "password",
-          password_confirmation: "password" 
+          password_confirmation: "password",
+          bootcamp_name: "test" 
         } 
       }
     end

@@ -23,7 +23,9 @@ class UsersEditTest < ActionDispatch::IntegrationTest
         name:  '',
         email: 'foo@invalid',
         password:'foo',
-        password_confirmation: 'bar' 
+        password_confirmation: 'bar',
+        bootcamp_name: '' 
+
       } 
     }
     assert_template 'users/edit'
@@ -38,7 +40,8 @@ class UsersEditTest < ActionDispatch::IntegrationTest
         name:  'My new name',
         email: 'foo@valid.com',
         password:'foobars',                
-        password_confirmation: 'foobars' 
+        password_confirmation: 'foobars',
+        bootcamp_name: 'flatiron'  
       } 
     }
     assert_not flash.empty?
