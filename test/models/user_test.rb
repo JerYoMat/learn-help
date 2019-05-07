@@ -97,4 +97,15 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.authenticated?('')
   end
 
+  test "should follow and unfollow a user" do
+    @first_user = users(:test_user_one)
+    @second_user  = users(:test_user_two)
+    assert_not @second_user.following?(@first_user)
+    @first_user.follow(@second_user)
+    assert @first_user.following?(@second_user)
+    assert @second_user.followers.include?(@first_user)
+    @first_user.unfollow(@second_user)
+    assert_not @first_user.following?(@second_user)
+  end
+
 end
