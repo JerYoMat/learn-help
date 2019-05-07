@@ -1,13 +1,18 @@
 <div class='navigation'>
   <a href='/' id='logo'>
-    <span id='slash'>//</span>
-    <span id='learn'>learn</span>    <span id='help'>HELP</span>
+    <span id='slash'><strong>//</strong></span><span id='learn'>learn</span><span id='help'>HELP</span>
   </a>
   <div class='content-links'>
     <a href='/topics' class='nav-left'>Topics</a>
+    <a href='/topics' class='nav-left'>Hindsight</a>
+    <a href='/topics' class='nav-left'>All Stars</a>
   </div>
   <div class='user-links'>
+  <% if !logged_in? %>
     <a href='/login' class='nav-right'>Log in</a>
-    <button href='/signup' class='nav-right'>Sign up</button>
+    <a href='/signup' class='nav-right'>Sign up</a><span>|</span>
+  <% else %>
+    <%= link_to '' , edit_user_path(@current_user) , class: "fas fa-user-circle nav-right" %>
+  <% end %>
   </div>
 </div>
